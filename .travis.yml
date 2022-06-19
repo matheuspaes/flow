@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t matheuspaesp/flow -f Dockerfile.dev .
+  - docker build -t matheuspaesp/flow -f frontend/Dockerfile.dev frontend/.
 
 script:
   - docker run -e CLI=true matheuspaesp/flow npm run test
